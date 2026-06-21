@@ -18,6 +18,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
+    "paths": { "@/*": ["./*"] },
     "types": ["node", "vitest/globals", "@testing-library/jest-dom"],
     "plugins": [
       {
