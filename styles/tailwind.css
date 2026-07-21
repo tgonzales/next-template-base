@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+/* Light mode é o default do produto: o variant `dark:` só se aplica sob a
+   classe .dark (opt-in explícito), nunca pela preferência do SO — sem isto,
+   um usuário com o sistema em dark via o template e os apps gerados nascerem
+   escuros. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
